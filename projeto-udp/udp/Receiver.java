@@ -25,7 +25,7 @@ public class Receiver {
 
 
             var mensagemRecebida = new Mensagem();
-            mensagemRecebida.setMesagemPorTexto(new String(recPkt.getData()).trim());
+            mensagemRecebida.setMensagemPorTexto(new String(recPkt.getData()).trim());
             System.out.println(mensagemRecebida.getMensagem()+"  ID ->> "+ mensagemRecebida.getId());
 
 
