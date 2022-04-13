@@ -8,8 +8,10 @@ import java.util.stream.Collectors;
 
 public class Mensagem {
 
+
     private String id;
     private String mensagem;
+
 
 
     public Map<String, String> convertToMap(){
@@ -28,11 +30,9 @@ public class Mensagem {
 
     public void setMesagemPorTexto(String mapAsString){
 
-
         Map<String, String> map = Arrays.stream(mapAsString.substring(1, mapAsString.length()-1).split(","))
                 .map(entry -> entry.split("="))
                 .collect(Collectors.toMap(entry -> entry[0].trim(), entry -> entry[1]));
-
 
         setId(map.get("id"));
         setMensagem(map.get("mensagem"));
