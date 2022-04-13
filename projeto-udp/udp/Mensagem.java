@@ -39,7 +39,7 @@ public class Mensagem {
                 .collect(Collectors.toMap(entry -> entry[0].trim(), entry -> entry[1]));
 
         setId(map.get("id"));
-        setMensagemPorTexto(map.get("mensagem"));
+        setMensagem(map.get("mensagem"));
     }
 
     // Construtor inicial da classe mensagem

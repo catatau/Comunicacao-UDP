@@ -26,7 +26,7 @@ public class Receiver {
 
             // Convertendo pacote para Mensagem
             var mensagemRecebida = new Mensagem();
-            mensagemRecebida.setMesagemPorTexto(new String(recPkt.getData()).trim());
+            mensagemRecebida.setMensagemPorTexto(new String(recPkt.getData()).trim());
 
             // Verifica se é a primeira mensagem
             if(ultimoPacote.getId() == null){

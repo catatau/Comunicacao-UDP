@@ -93,7 +93,7 @@ public class Sender {
 
 
                         Mensagem ack = new Mensagem();
-                        ack.setMesagemPorTexto(ackRecebido);
+                        ack.setMensagemPorTexto(ackRecebido);
 
 
                         if (Objects.equals(ack.getId(), idUltimoPacoteSemResposta)) {
