@@ -1,7 +1,7 @@
-// Classe para implementação do cabeçalho das mensagens da transmissão       
+// Classe para implementacao do cabecalho das mensagens da transmissao
 package udp;
 
-// Importação de biblioteca auxiliares
+// Importacao de biblioteca auxiliares
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 
 public class Mensagem {
 
-    // Declaração de variáveis que serão os atributos para o cabeçalho da mensagem
+    // Declaracao de variaveis que serao os atributos para o cabecalho da mensagem
     private String id;
     private String mensagem;
 
-    // Método para converter strings para um Map (Json) 
-    // O retorno desta função é o objeto Map
+    // Metodo para converter strings para um Map (Json)
+    // O retorno desta funcao e o objeto Map
     public Map<String, String> convertToMap(){
         Map<String, String> dado = new HashMap<>();
         dado.put("id", id);
@@ -22,8 +22,8 @@ public class Mensagem {
         return dado;
     }
 
-    // Método para converter o Map para uma String
-    // O retorno desta função é uma string
+    // Metodo para converter o Map para uma String
+    // O retorno desta funcao e uma string
     public String convertToString(){
         var dado = convertToMap();
         return dado.keySet().stream()
@@ -31,7 +31,7 @@ public class Mensagem {
                 .collect(Collectors.joining(", ", "{", "}"));
     }
 
-    // Método que recebe uma string e instancia um Map (Json) com a estrutura do cabeçalho 
+    // Metodo que recebe uma string e instancia um Map (Json) com a estrutura do cabeÃ§alho
     public void setMensagemPorTexto(String mapAsString){
 
         Map<String, String> map = Arrays.stream(mapAsString.substring(1, mapAsString.length()-1).split(","))
